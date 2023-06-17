@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: CC4C
+  datasource:
+    #数据库驱动名称
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #数据库访问url，最后/cc4c_dev1处请填写你的数据库名称
+    url: jdbc:mysql://106.15.232.141:3306/cc4c_release
+    #数据库访问用户名
+    username: root
+    #数据库访问密码
+    password: '050598'
+  mail:
+    host: smtp.qq.com
+    password: 'moiusierhtoobjjf'
+    username: 1669812103@qq.com
+    default-encoding: UTF-8
+    port: 465
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+  servlet:
+    multipart:
+      #文件传输的大小上限
+      max-file-size: 100MB
+      max-request-size: 1000MB
+server:
+  #项目启动的端口号，可以自己设定，但请与前端设置的不同
+  port: 4080
+
+#自定义配置属性
+cc4c:
+  #存储博客图片的路径
+  save-img-path: G:\Code Programming\Vue3\CC4C\public\blogImg\
+  #返回的请求访问博客图片的路径
+  request-img-path: http://localhost:5173/blogImg/
+  #头像存储路径
+  save-avatar-path: G:\Code Programming\Vue3\CC4C\public\avatar\
+  #返回的请求访问头像图片的路径
+  request-avatar-path: http://localhost:5173/avatar/
+
